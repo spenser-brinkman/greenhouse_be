@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/plants/unassigned', to: 'plants#unassigned_plants'
+  resources :spaces, only: [:index, :show, :create, :update, :destroy]
+  resources :plants, only: [:index, :show, :create, :update, :destroy]
+
 end
