@@ -51,7 +51,7 @@ class PlantsController < ApplicationController
   end
 
   def render_plant_data
-    render json: PlantSerializer.new(@plant_data).to_serialized_json
+    render json: PlantSerializer.new(@plant_data)
   end
 
 end

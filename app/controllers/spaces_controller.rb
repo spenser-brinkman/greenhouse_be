@@ -47,6 +47,6 @@ class SpacesController < ApplicationController
   end
 
   def render_space_data
-    render json: SpaceSerializer.new(@space_data).to_serialized_json
+    render json: SpaceSerializer.new(@space_data)
   end
 end
