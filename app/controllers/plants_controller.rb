@@ -17,7 +17,7 @@ class PlantsController < ApplicationController
     if @plant_data.save
       render_plant_data
     else
-      render json: {message: "ERROR, YOU MAY CHANGE THIS MESSAGE IN APP/CONTROLLERS/PLANTS_CONTROLLER.RB"}
+      render json: {message: "ERROR, PLANT WAS INVALID. YOU MAY CHANGE THIS MESSAGE IN APP/CONTROLLERS/PLANTS_CONTROLLER.RB"}
     end
   end
 
