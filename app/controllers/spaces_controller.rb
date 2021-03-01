@@ -1,5 +1,7 @@
 class SpacesController < ApplicationController
+  
   before_action :find_space, only: [:show, :update, :destroy]
+  before_action :snake_case_params
 
   def index
     @space_data = Space.all
@@ -36,6 +38,10 @@ class SpacesController < ApplicationController
     params.require(:space).permit(:name, :humidity, :light)
   end
 
+  def snake_case_params
+    request.parameters.deep_transform_keys!(&:underscore)
+  end
+  
   def find_space
     @space_data = Space.find_by(id: params[:id])
   end

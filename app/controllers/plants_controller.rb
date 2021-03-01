@@ -1,6 +1,7 @@
 class PlantsController < ApplicationController
 
   before_action :find_plant, only: [:show, :update, :destroy]
+  before_action :snake_case_params
 
   def index
     @plant_data = Plant.all
@@ -39,6 +40,10 @@ class PlantsController < ApplicationController
 
   def plant_params
     params.require(:plant).permit(:species, :light_req, :humidity_req, :water_freq, :last_water, :last_fert, :comments, :space_id)
+  end
+
+  def snake_case_params
+    request.parameters.deep_transform_keys!(&:underscore)
   end
 
   def find_plant
