@@ -9,7 +9,7 @@ Plant.create(space_id: laundry.id, species: "Alocasia", light_req: 3, humidity_r
 Plant.create(space_id: laundry.id, species: "Fern", light_req: 2, humidity_req: 5, water_freq: 3, last_water: Date.today, last_fert: Date.today-30, comments: "Rescue is doing well")
 Plant.create(space_id: laundry.id, species: "Fern", light_req: 2, humidity_req: 5, water_freq: 3, last_water: Date.today, last_fert: Date.today-30, comments: "Noticed yellowing on leaves, keep an eye on moisture")
 Plant.create(space_id: laundry.id, species: "Satin Pothos", light_req: 3, humidity_req: 2, water_freq: 14, last_water: Date.today-1, last_fert: Date.today-30, comments: "")
-Plant.create(space_id: laundry.id, species: "Neon Pothos", light_req: 3, humidity_req: 2, water_freq: 14, last_water: Date.today-1, last_fert: Date.today-30, comments: `Propagation started on #{Date.today-15}`)
+Plant.create(space_id: laundry.id, species: "Neon Pothos", light_req: 3, humidity_req: 2, water_freq: 14, last_water: Date.today-1, last_fert: Date.today-30, comments: "Propagation started on " + (Date.today-15).to_s)
 Plant.create(space_id: bedroom.id, species: "Bambino Fiddle Leaf Fig", light_req: 3, humidity_req: 2, water_freq: 7, last_water: Date.today-3, last_fert: Date.today-30, comments: "")
 Plant.create(space_id: bedroom.id, species: "Philodendron Birkin", light_req: 3, humidity_req: 2, water_freq: 7, last_water: Date.today-6, last_fert: Date.today-30, comments: "")
 Plant.create(space_id: bedroom.id, species: "Philodendron Micans", light_req: 3, humidity_req: 2, water_freq: 7, last_water: Date.today-5, last_fert: Date.today-30, comments: "")
