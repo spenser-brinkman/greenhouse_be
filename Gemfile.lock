@@ -145,7 +145,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   fast_jsonapi
-  pg (>= 0.18, < 2.0)
+  pg
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.5)
