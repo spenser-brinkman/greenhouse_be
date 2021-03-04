@@ -29,6 +29,7 @@ class PlantsController < ApplicationController
   def destroy
     find_plant
     @plant_data.destroy
+    head :no_content
   end
 
   def unassigned_plants
