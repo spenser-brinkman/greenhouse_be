@@ -27,7 +27,10 @@ class SpacesController < ApplicationController
   end
 
   def destroy
-    @space_data.plants.each {|p| p.space_id = ""}
+    @space_data.plants.each do |p|
+      p.space_id = nil
+      p.save
+    end
     @space_data.delete
   end
 
