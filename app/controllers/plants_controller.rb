@@ -27,8 +27,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy
-    find_plant
-    @plant_data.destroy
+    @plant_data.delete
     head :no_content
   end
 
