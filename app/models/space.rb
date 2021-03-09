@@ -1,5 +1,6 @@
 class Space < ApplicationRecord
   has_many :plants
+  belongs_to :user, optional: true
 
   validates :name, :humidity, :light, presence: true
   validates :name, uniqueness: true
