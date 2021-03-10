@@ -1,19 +1,16 @@
 class PlantsController < ApplicationController
 
-  before_action :find_plant, only: [:show, :update, :destroy]
+  before_action :find_plant, only: [:update, :destroy]
   before_action :snake_case_params
 
   def index
-    @plant_data = Plant.all
-    render_plant_data
-  end
-
-  def show
+    @plant_data = session_user.plants
     render_plant_data
   end
 
   def create
     @plant_data = Plant.new(plant_params)
+    @plant_data.user = session_user
     if @plant_data.save
       render_plant_data
     else
@@ -22,11 +19,13 @@ class PlantsController < ApplicationController
   end
 
   def update
+    authorize(@plant_data)
     @plant_data.update(plant_params)
     render_plant_data
   end
 
   def destroy
+    authorize(@plant_data)
     @plant_data.delete
     head :no_content
   end

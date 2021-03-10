@@ -2,6 +2,7 @@ class User < ApplicationRecord
   
   validates :username, uniqueness: true, presence: true
   # validate :password_complexity
+  
   validates_confirmation_of :password
   
   has_secure_password
