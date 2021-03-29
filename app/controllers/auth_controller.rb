@@ -6,7 +6,7 @@ class AuthController < ApplicationController
       @token = encode_token({user_id: @user.id})
       render json: {user: UserSerializer.new(@user), jwt: @token, success: "Welcome back, #{@user.username}"}
     else
-      render json: {failure: "Failure, see auth_controller"}
+      render json: {error: "Something went wrong.\nVerify your username and password and try again."}
     end
   end
 

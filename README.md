@@ -1,24 +1,4 @@
-# README
+### GreenHouse Backend
+This is the Rails API built to serve as the backend of GreenHouse, hosted [here](https://greenhouse-js.herokuapp.com/) on Heroku. You can find the frontend repository [here](https://github.com/spenser6131/greenhouse-v2-frontend).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GreenHouse gives plant-moms and -dads the ability to better provide their houseplants with optimal growing environments and more consistent watering/fertilization schedules. Users can create a virtual home of different rooms, each with a 1-5 rating of the room's light and humidity levels. The rooms are then filled with plants, each with their own light and humidity requirements, as well as a few other useful stats and metrics. Plant/Room suitability is reflected in the details of each plant, helping the user determine whether a plant should be relocated.
