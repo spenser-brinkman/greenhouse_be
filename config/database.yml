@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: greenhouse_be_production
-  username: greenhouse_be
-  password: <%= ENV['GREENHOUSE_BE_DATABASE_PASSWORD'] %>
+  database: greenhouse_production
+  username: greenhouse
+  password: <%= Rails.application.credentials.database_password %>
